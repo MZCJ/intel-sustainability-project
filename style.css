@@ -1,60 +1,68 @@
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .hero {
   text-align: center;
-  background: #0f78d3;
-  color: white;
   padding: 2rem;
+  background-color: #0071c5;
+  color: white;
 }
 .logo {
-  max-width: 150px;
-  margin-bottom: 1rem;
-}
-.language-switcher button {
-  margin: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  font-weight: bold;
+  max-width: 100px;
 }
 .timeline {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   padding: 2rem;
-  scroll-snap-type: x mandatory;
 }
 .milestone {
-  flex: 0 0 auto;
-  width: 300px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  scroll-snap-align: start;
-  text-align: center;
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
 }
 .milestone img {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+.milestone-year {
+  text-align: center;
+  background-color: #0071c5;
+  color: white;
+  padding: 0.5rem;
+  font-weight: bold;
 }
 .milestone-content {
   padding: 1rem;
 }
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-  }
-  .milestone {
-    width: 100%;
-  }
-}
-.footer {
-  background: #f1f1f1;
+.subscribe {
   text-align: center;
   padding: 2rem;
+  background-color: #ffffff;
+  margin: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.subscribe input {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  width: 250px;
+}
+.subscribe button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background-color: #0071c5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
 }

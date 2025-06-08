@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,174 +7,105 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (['ar', 'he', 'fa'].includes(lang.slice(0, 2))) {
+      document.documentElement.setAttribute('dir', 'rtl');
     }
-    .hero {
-      background-color: #0071c5;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .logo {
-      max-width: 150px;
-    }
-    .language-switcher {
-      margin-top: 1rem;
-    }
-    .language-switcher button {
-      margin: 0 0.5rem;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-    .timeline {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .milestone {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      min-width: 280px;
-      scroll-snap-align: start;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .milestone:hover {
-      transform: translateY(-5px);
-    }
-    .milestone img {
-      max-width: 100%;
-      border-radius: 4px;
-    }
-    .milestone-content p {
-      display: none;
-    }
-    .milestone:hover .milestone-content p {
-      display: block;
-    }
-    .footer {
-      padding: 2rem;
-      background: #f5f5f5;
-      text-align: center;
-    }
-    .subscribe input {
-      padding: 0.5rem;
-      margin-right: 0.5rem;
-    }
-    .subscribe button {
-      padding: 0.5rem 1rem;
-    }
-    @media (max-width: 768px) {
-      .timeline {
-        flex-direction: column;
-        overflow-x: hidden;
-        scroll-snap-type: none;
-      }
-    }
-  </style>
+  </script>
 </head>
 <body>
   <header class="hero" role="banner" aria-label="Site header">
-    <img src="images/Intel logo.jpg" alt="Intel Logo" class="logo">
+    <img src="images/intel-logo.svg" alt="Intel Logo" class="logo">
     <h1>Intel’s Sustainability Journey</h1>
     <p>From Foundation to Future: How Intel Changed the World</p>
   </header>
 
   <section class="timeline" role="region" aria-label="Intel milestones timeline">
     <div class="milestone">
+      <div class="milestone-year">1968</div>
       <img src="images/1968.jpg" alt="Milestone 1968">
       <div class="milestone-content">
-        <h2>1968</h2>
         <p>Intel was founded by Robert Noyce and Gordon Moore, planting the seed for the modern computing age.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">1971</div>
       <img src="images/1971.jpg" alt="Milestone 1971">
       <div class="milestone-content">
-        <h2>1971</h2>
         <p>Released the Intel 4004, the world's first commercial microprocessor—revolutionizing electronics and computation.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">1981</div>
       <img src="images/1981.jpg" alt="Milestone 1981">
       <div class="milestone-content">
-        <h2>1981</h2>
         <p>Powered IBM’s first personal computer with Intel’s x86 processor, ushering in the PC era.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">1990s</div>
       <img src="images/1995.jpg" alt="Milestone 1990s">
       <div class="milestone-content">
-        <h2>1990s</h2>
         <p>Intel’s processors enabled explosive internet growth, laying the hardware foundation for the World Wide Web.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">2000s</div>
       <img src="images/2006.jpg" alt="Milestone 2000s">
       <div class="milestone-content">
-        <h2>2000s</h2>
         <p>Introduced energy-efficient chip designs (e.g., Intel Core), balancing performance and power for a greener world.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">2016</div>
       <img src="images/2016.jpg" alt="Milestone 2016">
       <div class="milestone-content">
-        <h2>2016</h2>
         <p>Expanded into AI and autonomous driving with acquisitions like Mobileye, reshaping how tech impacts daily life.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">2020</div>
       <img src="images/2020.jpg" alt="Milestone 2020">
       <div class="milestone-content">
-        <h2>2020</h2>
         <p>Achieved 100% renewable energy use for all U.S. operations, setting an industry standard for sustainability.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">2023</div>
       <img src="images/2023.jpg" alt="Milestone 2023">
       <div class="milestone-content">
-        <h2>2023</h2>
         <p>Opened Intel’s first net-zero carbon certified factory in Chandler, Arizona—paving the way for green manufacturing.</p>
       </div>
     </div>
+
     <div class="milestone">
+      <div class="milestone-year">2040</div>
       <img src="images/2040.jpg" alt="Milestone 2040">
       <div class="milestone-content">
-        <h2>2040</h2>
         <p>Intel aims for net-zero greenhouse gas emissions across all global operations and equitable AI access worldwide.</p>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <section class="subscribe" role="region" aria-label="Subscribe to Intel updates">
+  <section class="subscribe" aria-label="Subscribe to Intel updates">
+    <form>
       <h2>Stay Updated</h2>
-      <form>
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com">
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-    <div class="language-switcher">
-      <button onclick="setLang('ar', 'rtl')">AR</button>
-      <button onclick="setLang('en', 'ltr')">EN</button>
-    </div>
-  </footer>
+      <label for="email">Email address</label><br>
+      <input type="email" id="email" name="email" required placeholder="example@email.com">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
 
-  <script>
-    function setLang(lang, dir) {
-      document.documentElement.lang = lang;
-      document.documentElement.dir = dir;
-    }
-  </script>
+  <footer class="footer">
+    <p>&copy; 2025 Intel Corporation. All rights reserved.</p>
+  </footer>
 </body>
 </html>
