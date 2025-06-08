@@ -7,87 +7,105 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (['ar', 'he', 'fa'].includes(lang.slice(0, 2))) {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
 </head>
 <body>
-  <header class="hero">
+  <header class="hero" role="banner" aria-label="Site header">
     <img src="images/intel-logo.svg" alt="Intel Logo" class="logo">
     <h1>Intel’s Sustainability Journey</h1>
     <p>From Foundation to Future: How Intel Changed the World</p>
   </header>
 
-  <section class="timeline">
+  <section class="timeline" role="region" aria-label="Intel milestones timeline">
     <div class="milestone">
+      <div class="milestone-year">1968</div>
       <img src="images/1968.jpg" alt="Milestone 1968">
       <div class="milestone-content">
-        <h2>1968</h2>
         <p>Intel was founded by Robert Noyce and Gordon Moore, planting the seed for the modern computing age.</p>
       </div>
     </div>
 
     <div class="milestone">
+      <div class="milestone-year">1971</div>
       <img src="images/1971.jpg" alt="Milestone 1971">
       <div class="milestone-content">
-        <h2>1971</h2>
         <p>Released the Intel 4004, the world's first commercial microprocessor—revolutionizing electronics and computation.</p>
       </div>
     </div>
 
     <div class="milestone">
+      <div class="milestone-year">1981</div>
       <img src="images/1981.jpg" alt="Milestone 1981">
       <div class="milestone-content">
-        <h2>1981</h2>
         <p>Powered IBM’s first personal computer with Intel’s x86 processor, ushering in the PC era.</p>
       </div>
     </div>
 
     <div class="milestone">
+      <div class="milestone-year">1990s</div>
       <img src="images/1995.jpg" alt="Milestone 1990s">
       <div class="milestone-content">
-        <h2>1990s</h2>
         <p>Intel’s processors enabled explosive internet growth, laying the hardware foundation for the World Wide Web.</p>
       </div>
     </div>
 
     <div class="milestone">
+      <div class="milestone-year">2000s</div>
       <img src="images/2006.jpg" alt="Milestone 2000s">
       <div class="milestone-content">
-        <h2>2000s</h2>
         <p>Introduced energy-efficient chip designs (e.g., Intel Core), balancing performance and power for a greener world.</p>
       </div>
     </div>
 
     <div class="milestone">
+      <div class="milestone-year">2016</div>
       <img src="images/2016.jpg" alt="Milestone 2016">
       <div class="milestone-content">
-        <h2>2016</h2>
         <p>Expanded into AI and autonomous driving with acquisitions like Mobileye, reshaping how tech impacts daily life.</p>
       </div>
     </div>
- 
-    <div class="milestone">
-  <img src="images/2020.jpg" alt="Milestone 2020">
-  <div class="milestone-content">
-    <h2>2020</h2>
-    <p>Achieved 100% renewable energy use for all U.S. operations, setting an industry standard for sustainability.</p>
-  </div>
-</div>
-
 
     <div class="milestone">
+      <div class="milestone-year">2020</div>
+      <img src="images/2020.jpg" alt="Milestone 2020">
+      <div class="milestone-content">
+        <p>Achieved 100% renewable energy use for all U.S. operations, setting an industry standard for sustainability.</p>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="milestone-year">2023</div>
       <img src="images/2023.jpg" alt="Milestone 2023">
       <div class="milestone-content">
-        <h2>2023</h2>
         <p>Opened Intel’s first net-zero carbon certified factory in Chandler, Arizona—paving the way for green manufacturing.</p>
       </div>
     </div>
 
     <div class="milestone">
+      <div class="milestone-year">2040</div>
       <img src="images/2040.jpg" alt="Milestone 2040">
       <div class="milestone-content">
-        <h2>2040</h2>
         <p>Intel aims for net-zero greenhouse gas emissions across all global operations and equitable AI access worldwide.</p>
       </div>
     </div>
   </section>
+
+  <section class="subscribe" aria-label="Subscribe to Intel updates">
+    <form>
+      <h2>Stay Updated</h2>
+      <label for="email">Email address</label><br>
+      <input type="email" id="email" name="email" required placeholder="example@email.com">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Intel Corporation. All rights reserved.</p>
+  </footer>
 </body>
 </html>
